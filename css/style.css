@@ -6,11 +6,11 @@ p {
     line-height: 1.8;
 }
 
-h1, h2, h3, h4, h5, h6 {
+/*h1, h2, h3, h4, h5, h6 {
     font-weight: normal;
     font-family: "Oxygen", sans-serif;
     margin-bottom: 10px;
-}
+}*/
 
 .leftline {
     border-left: 1px solid #F4F4F4;
@@ -341,7 +341,7 @@ td img {
 }
 
 .container {
-    background-color: white;
+    background-color: none;
 }
 
 /* @override http://localhost/bxslider_v3_plugin/css/styles.css */
@@ -462,7 +462,6 @@ td img {
 a {color: #6A231F;}
 a:hover { color: #6A231F; text-decoration: underline; }
 
-body { background-color: #e2e5ce;}
 
 /*header { margin-top: 10px; }*/
 
@@ -596,3 +595,8 @@ hr {
 .nav-tabs > li > span:hover > a {
     text-decoration:none;
 }
+
+.navbar.navbar-inverse {
+	background-color: #ac2a13;
+}
+
