@@ -44,6 +44,7 @@
     queue_js_file(array(
         'bootstrap.min',
         'jquery.bxSlider.min',
+//	'hide_ticha',
     ));
     echo head_js();
     ?>
@@ -58,7 +59,48 @@
 <!--    <div id="wrap" class="container">-->
 <header>
 <nav class="navbar navbar-inverse" role="navigation">
-        <div class="container">
+       
+
+<!--	 <div class="container">
+             Brand and toggle get grouped for better mobile display 
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>-->
+	        <ul class="nav nav-pills pull-right">
+
+                    <?php if ($scripto->isLoggedIn()): ?>
+                    <li class="dropdown"><a href="#" class="btn btn-default dropdown-toggle" id="signin-button" data-toggle="dropdown"><?php echo $scripto->getUserName(); ?><b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="<?php echo WEB_ROOT; ?>/scripto">Your Contributions</a></li>
+                            <li><a href="<?php echo WEB_ROOT; ?>/scripto/watchlist">Your Watchlist</a></li>
+                            <li><a href="<?php echo WEB_ROOT; ?>/scripto/recent-changes">Recent Changes</a></li>
+                            <li><a href="<?php echo WEB_ROOT; ?>/scripto/logout">Logout</a></li>
+                        </ul>
+                    </li>
+
+                    <?php else: ?>
+
+                    <li>
+                    <a href="<?php echo WEB_ROOT; ?>/scripto/login" class="btn btn-default" id="signin-button">Sign in or register</a>
+                    </li>
+
+                    <?php endif; ?>
+                    </ul>
+
+                <!--<a class="navbar-brand" href="index_new.html">
+                    <img src="../img/logo2_long.png" alt="" height="120" width="380">
+                </a>-->
+               <!-- gets page url, places it after /es/ (in Spanish subdirectory) -->
+<!--<a href="../es/" id="language-button" class="btn btn-default">
+ Warning: with subdirectories added, this url will stop working 
+  Español
+</a>-->
+
+<div class="container">
             <!-- Brand and toggle get grouped for better mobile display -->
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
@@ -68,16 +110,9 @@
                     <span class="icon-bar"></span>
                 </button>
 
-                <!--<a class="navbar-brand" href="index_new.html">
-                    <img src="../img/logo2_long.png" alt="" height="120" width="380">
-                </a>-->
-               <!-- gets page url, places it after /es/ (in Spanish subdirectory) -->
-<a href="../es/" id="language-button" class="btn btn-default">
-<!-- Warning!: with subdirectories added, this url will stop working -->
-  Español
-</a>
 
-				<p><h2><a href="index.html">Ticha</a></h2></p>
+
+				<p><h2><a href="http://new-ticha.haverford.edu/documents/">Ticha</a></h2></p>
 				<p><h4>a digital text explorer for Colonial Zapotec</h4></p>
 
 			</div>

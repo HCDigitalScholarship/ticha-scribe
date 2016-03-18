@@ -91,6 +91,33 @@ background-image: url('../img/blank_arte.png');
     }
   }
 
+#signin-button {
+ /* position: absolute;
+  right: 90px;*/
+  top: 10px;
+  right: 10px;
+  padding: 9px 10px;
+  border: 1px solid #DA3518;
+  line-height: 1em;
+  background-color: transparent;
+}
+#signin-button:hover,
+#signin-button:focus {
+  background-color: #DA3518;
+}
+  @media (max-width: 900px) {
+    #signin-button {
+      top: 55px;
+    }
+  }
+  @media (max-width: 480px) {
+    #signin-button {
+      top: 13px;
+      right: 65px;
+    }
+  }
+
+
 #text-button:hover,
 #text-button:focus,
 #text-button:active,
@@ -525,3 +552,6 @@ width: auto;
   margin-top: 0;
 }
 
+.transcribe-container {
+  width:100%;
+}

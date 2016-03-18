@@ -12,15 +12,17 @@ echo head($head);
 
     <div id="scripto-login" class="scripto">
         <!-- navigation -->
-        <ul class="nav nav-tabs">
+       <!-- <ul class="nav nav-tabs">
             <li class="active"><a href="<?php echo html_escape(url('scripto/index/login')); ?>"><?php echo __('Log in to Scripto'); ?></a></li>
-<!--
+
     mediawiki doesn't offer account creation through their API. You must link directly to the page in your installation
     /my_mediawiki_install_directory/index.php5?title=Special:UserLogin&type=signup
--->
-            <li><a href="#" target="_blank"><?php echo __('Create an account'); ?></a></li>
+
+            <li><a href="http://new-ticha.haverford.edu/mediawiki/index.php?title=Special:UserLogin&returnto=Main+Page&type=signup" target="_blank"><?php echo __('Create an account'); ?></a></li>
             <li><a href="<?php echo html_escape(url('scripto/recent-changes')); ?>"><?php echo __('Recent changes'); ?></a></li>
         </ul>
+-->
+	<p><a href="http://new-ticha.haverford.edu/mediawiki/index.php?title=Special:UserLogin&returnto=Main+Page&type=signup" target="_blank"><?php echo __('Create an account'); ?></a></p>
         <p><?php echo __(
             'Log in to Scripto using your MediaWiki username and password to access your account '
           . 'and enable certain Scripto features. Login may not be required by the administrator.'

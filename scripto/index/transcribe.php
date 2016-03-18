@@ -330,6 +330,7 @@ jQuery(document).ready(function() {
 
 <?php if (!is_admin_theme()): ?>
 <h1><?php echo $head['title']; ?></h1>
+<div class="container transcribe-container">
 <?php endif; ?>
 <div id="primary">
 <?php echo flash(); ?>
@@ -370,8 +371,10 @@ jQuery(document).ready(function() {
         </div>
 
         <!-- document viewer -->
+	<div class="transcribe-container">
+        <div class="doc-column">
         <?php echo file_markup($this->file, array('imageSize' => 'fullsize')); ?>
-
+	</div>
         <!-- pagination -->
         <p>
         <?php if (isset($this->paginationUrls['previous'])): ?><a href="<?php echo html_escape($this->paginationUrls['previous']); ?>">&#171; <?php echo __('previous page'); ?></a><?php else: ?>&#171; <?php echo __('previous page'); ?><?php endif; ?>
@@ -380,7 +383,8 @@ jQuery(document).ready(function() {
         </p>
 
         <!-- transcription -->
-        <div id="scripto-transcription">
+         <div class="transcribe-column">
+	 <div id="scripto-transcription">
         <?php if ($this->doc->canEditTranscriptionPage()): ?>
             <div id="scripto-transcription-edit" style="display: none;">
             <?php if ($this->doc->isProtectedTranscriptionPage()): ?>
@@ -416,6 +420,8 @@ jQuery(document).ready(function() {
             </div>
             <div id="scripto-transcription-page-html"><?php echo $this->transcriptionPageHtml; ?></div>
         </div><!-- #scripto-transcription -->
+	</div> <!-- transcribe column -->
+	</div>
 
         <!-- discussion -->
         <div id="scripto-talk">
@@ -441,5 +447,6 @@ jQuery(document).ready(function() {
         </div><!-- #scripto-talk -->
 
     </div><!-- #scripto-transcribe -->
+</div>
 </div>
 <?php echo foot(); ?>

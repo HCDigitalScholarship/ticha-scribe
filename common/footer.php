@@ -11,17 +11,17 @@
             </div>
 
             <div id="footer-text">
-                <?php echo get_theme_option('Footer Text'); ?>
-                <?php if ((get_theme_option('Display Footer Copyright') == 1) && $copyright = option('copyright')): ?>
-                    <p><?php echo $copyright; ?></p>
-                <?php endif; ?>
-                <p><?php echo __('Proudly powered by <a href="http://omeka.org">Omeka</a>.'); ?></p>
+                <//?php echo get_theme_option('Footer Text'); ?>
+                <//?php if ((get_theme_option('Display Footer Copyright') == 1) && $copyright = option('copyright')): ?>
+                    <p><//?php echo $copyright; ?></p>
+                <//?php endif; ?>
+                <p><//?php echo __('Proudly powered by <a href="http://omeka.org">Omeka</a>.'); ?></p>
             </div>
 
-            <?php fire_plugin_hook('public_footer', array('view'=>$this)); ?>
+            <//?php fire_plugin_hook('public_footer', array('view'=>$this)); ?>
 
         </footer>-->
-<footer>		  
+<footer id="footer">		  
   <div class="col-xs-12">
                 <p class = "blockcenter" style = "font-style: normal;">
                        <h5>How to cite</h5>

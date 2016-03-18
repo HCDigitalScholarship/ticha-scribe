@@ -459,7 +459,7 @@ td img {
 
 #header { height: 100px; background-color: #FFF; margin: 0; padding: 0; background-image: url(../images/background.gif); }
 
-a {color: #6A231F;}
+/*a {color: #6A231F;}*/
 a:hover { color: #6A231F; text-decoration: underline; }
 
 
@@ -599,4 +599,22 @@ hr {
 .navbar.navbar-inverse {
 	background-color: #ac2a13;
 }
+nscribe-container {
+width:100%;
+height:100%;
+display:table-cell
+}
 
+.doc-column {
+height:100%;
+width:63%;
+float:left;
+display:table-cell
+}
+
+.transcribe-column {
+height:100%;
+width:35%;
+float:right;
+display:table-cell
+}

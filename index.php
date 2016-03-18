@@ -12,6 +12,21 @@ error_reporting(E_ALL);
     <?php endif; ?>
 
 <?php
+echo "
+<script text=javascript>
+console.log('we did it boyz');
+var url = window.location.href
+console.log(url);
+  if (url.indexOf('/documents/') > -1) {
+      jQuery('#language-button').hide();
+      jQuery('#language-button').text('Site Not Available in Spanish');
+      jQuery('#language-button').css('fontSize, 5px');
+  }
+</script>
+"
+?>
+
+<?php
     $collectionTitle = '';
     $collectionIDs = collection_order_array();
     $num_of_collections = count($collectionIDs);
@@ -74,7 +89,7 @@ error_reporting(E_ALL);
     echo "}); " . PHP_EOL;
     echo "}( window.jQuery ) " . PHP_EOL;
     echo "</script> " . PHP_EOL;
-
+    echo "Documents Site Only Available in Spanish";
     fire_plugin_hook('public_home', array('view' => $this));
     echo foot();
  ?>
