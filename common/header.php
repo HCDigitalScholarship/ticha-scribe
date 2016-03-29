@@ -70,10 +70,10 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>-->
-	        <ul class="nav nav-pills pull-right">
+<!--	        <ul class="nav nav-pills pull-right">
 
-                    <?php if ($scripto->isLoggedIn()): ?>
-                    <li class="dropdown"><a href="#" class="btn btn-default dropdown-toggle" id="signin-button" data-toggle="dropdown"><?php echo $scripto->getUserName(); ?><b class="caret"></b></a>
+                    <//?php if ($scripto->isLoggedIn()): ?>
+                    <li class="dropdown"><a href="#" class="btn btn-default dropdown-toggle" id="signin-button" data-toggle="dropdown"><//?php echo $scripto->getUserName(); ?><b class="caret"></b></a>
                         <ul class="dropdown-menu">
                             <li><a href="<?php echo WEB_ROOT; ?>/scripto">Your Contributions</a></li>
                             <li><a href="<?php echo WEB_ROOT; ?>/scripto/watchlist">Your Watchlist</a></li>
@@ -82,14 +82,14 @@
                         </ul>
                     </li>
 
-                    <?php else: ?>
+                    <//?php else: ?>
 
                     <li>
-                    <a href="<?php echo WEB_ROOT; ?>/scripto/login" class="btn btn-default" id="signin-button">Sign in or register</a>
+                    <a href="<//?php echo WEB_ROOT; ?>/scripto/login" class="btn btn-default" id="signin-button">Sign in or register</a>
                     </li>
 
-                    <?php endif; ?>
-                    </ul>
+                    <//?php endif; ?>
+                    </ul>-->
 
                 <!--<a class="navbar-brand" href="index_new.html">
                     <img src="../img/logo2_long.png" alt="" height="120" width="380">
@@ -99,8 +99,7 @@
  Warning: with subdirectories added, this url will stop working 
   Español
 </a>-->
-
-<div class="container">
+ <div class="container">
             <!-- Brand and toggle get grouped for better mobile display -->
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
@@ -110,53 +109,60 @@
                     <span class="icon-bar"></span>
                 </button>
 
+                <!--<a class="navbar-brand" href="index_new.html">
+                    <img src="../img/logo2_long.png" alt="" height="120" width="380">
+                </a>-->
+                <!-- get page url, places it back to / (main directory is English version when implemented) -->
+<!--<a href="../en/about.html" id="language-button" class="btn btn-default">
+ Warning!: with subdirectories added, this url will stop working 
+  English
+</a>-->
 
-
-				<p><h2><a href="http://new-ticha.haverford.edu/documents/">Ticha</a></h2></p>
-				<p><h4>a digital text explorer for Colonial Zapotec</h4></p>
+				<p><h2><a href="http://new-ticha.haverford.edu/es/">Ticha</a></h2></p>
+				<p><h4>un explorador digital de texto para el zapoteco colonial</h4></p>
 
 			</div>
 			<div class="navbar-collapse collapse navbar-ex1-collapse">
               <ul class="nav navbar-nav navbar-right">
                 <!--<li class="active"><a href="index_new.html">Home</a></li>-->
 				<li class="dropdown">
-                  <a href="#" class="dropdown-toggle" data-toggle="dropdown">About<b class="caret"></b></a>
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown">Acerca de Ticha<b class="caret"></b></a>
                   <ul class="dropdown-menu">
-                    <li><a href="about.html">The project</a></li>
-					<li><a href="team.html">The team</a></li>
-					<li><a href="acknowledgements.html">Acknowledgements</a></li>
-                    <li><a href="form.html">Contact us</a></li>
+                    <li><a href="http://new-ticha.haverford.edu/es/about.html">El proyecto</a></li>
+					<li><a href="http://new-ticha.haverford.edu/es/team.html">El equipo</a></li>
+					<li><a href="http://new-ticha.haverford.edu/es/acknowledgements.html">Agradecimientos</a></li>
+                    <li><a href="http://new-ticha.haverford.edu/es/form.html">Contacto</a></li>
                   </ul>
 				  </li>
 				<li class="dropdown">
-                  <a href="#" class="dropdown-toggle" data-toggle="dropdown">Colonial Zapotec<b class="caret"></b></a>
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown">Zapoteco colonial<b class="caret"></b></a>
                   <ul class="dropdown-menu">
-                    <li><a href="linguistic.html">Linguistic background</a></li>
-                    <li><a href="context.html">Cultural context</a></li>
+                    <li><a href="http://new-ticha.haverford.edu/es/linguistic.html">Formación linguistica</a></li>
+                    <li><a href="http://new-ticha.haverford.edu/es/context.html">Contexto cultural</a></li>
                   </ul>
 				</li>
 				<li class="dropdown">
-                  <a href="texts.html" class="dropdown-toggle" data-toggle="dropdown">Explore texts<b class="caret"></b></a>
+                  <a href="texts.html" class="dropdown-toggle" data-toggle="dropdown">Explora los textos<b class="caret"></b></a>
                   <ul class="dropdown-menu">
-                    <li class="dropdown-header"><a href="texts.html">Explore texts</a></li>
+                    <li class="dropdown-header"><a href="http://new-ticha.haverford.edu/es/texts.html">Explora los textos</a></li>
 					<li class="divider"></li>
-                    <li class="dropdown-header"><a href="arte.html">Arte en lengua zapoteca</a></li>
+                    <li class="dropdown-header"><a href="http://new-ticha.haverford.edu/es/arte.html">Arte en lengua zapoteca</a></li>
 					<!--<li><a href="cordova.html">About Juan de Cordova</a></li>-->
-				            <li><a href="outline.html">Outline</a></li>
-                    <li><a href="arte_pdf.html">PDF</a></li>
-                    <li><a href="sample_arte.html">Sample page</a></li>
-                    <li><a href="arte_original.html">Transcription</a></li>
-                    <li><a href="reg_spanish.html">Regularized Spanish</a></li>
+				            <li><a href="http://new-ticha.haverford.edu/es/outline.html">Esquema</a></li>
+                    <li><a href="http://new-ticha.haverford.edu/es/arte_pdf.html">PDF</a></li>
+                    <li><a href="http://new-ticha.haverford.edu/es/sample_arte.html">El ejemplo de una página</a></li>
+                    <li><a href="http://new-ticha.haverford.edu/es/arte_original.html">Transcripción</a></li>
+                    <li><a href="http://new-ticha.haverford.edu/es/reg_spanish.html">Español regularizado</a></li>
 					<li class="divider"></li>
-                    <li class="dropdown-header"><a href="doctrina.html">Doctrina christiana en lengua castellana y çapoteca</a></li>
-					          <li><a href="feria.html">About Pedro de Feria</a></li>
-                    <li><a href="doctrina_pdf.html">PDF</a></li>
-                    <li><a href="sample_doctrina.html">Sample page</a></li>
+                    <li class="dropdown-header"><a href="http://new-ticha.haverford.edu/es/doctrina.html">Doctrina christiana en lengua castellana y çapoteca</a></li>
+					          <li><a href="http://new-ticha.haverford.edu/es/feria.html">Sobre Pedro de Feria</a></li>
+                    <li><a href="http://new-ticha.haverford.edu/es/doctrina_pdf.html">PDF</a></li>
+                    <li><a href="http://new-ticha.haverford.edu/es/sample_doctrina.html">El ejemplo de una página</a></li>
 					<li class="divider"></li>
-                    <li class="dropdown-header"><a href="handwritten.html">Handwritten texts</a></li>
-                    <li><a href="handwritten_texts.html">Available manuscripts</a></li>
-                    <li><a href="sample_handwritten.html">Sample manuscript</a></li>
-	                   <li><a href="timeline.html">Timeline of handwritten texts</a></li>
+                    <li class="dropdown-header"><a href="http://new-ticha.haverford.edu/es/handwritten.html">Textos en manoescrita</a></li>
+                    <li><a href="http://new-ticha.haverford.edu/es/handwritten_texts.html">Manuscritos disponibles</a></li>
+                    <li><a href="http://new-ticha.haverford.edu/es/sample_handwritten.html">Ejemplos de manuscritos</a></li>
+                    <li><a href="http://new-ticha.haverford.edu/es/timeline.html">Cronología de los documentos</a></li>
                   </ul>
 				</li>
 				<!--<li class="dropdown">
@@ -166,7 +172,7 @@
                     <li><a href="download.html">Download files</a></li>
                   </ul>
 				</li> -->
-        <li><a href="bibliography.html">Bibliography</a></li>
+        <li><a href="http://new-ticha.haverford.edu/es/bibliography.html">Bibliografía</a></li>
         <li>
             <a href="https://www.facebook.com/TichaColonialZapotecTextExplorer" target="blank" class="btn btn-social-icon btn-facebook">
                 <i class="fa fa-facebook fb-follow"></i>
@@ -178,12 +184,14 @@
                 <i class="fa fa-twitter"></i>
             </a>
 
-<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs'); </script>
 
         </li>
             </ul> <!-- end navbar -->
+
             </div><!-- end div class="navbar collapse" -->
           </div>
+    </nav>
     </nav>
 
 </header>

@@ -618,3 +618,10 @@ width:35%;
 float:right;
 display:table-cell
 }
+
+#transcription-tip{
+margin-top:7px;
+margin-bottom:7px;
+padding:2px 3px 3px 5px;
+background:#fff
+}

@@ -336,26 +336,26 @@ jQuery(document).ready(function() {
 <?php echo flash(); ?>
 
     <ul class="breadcrumb">
-        <li><a href="<?php echo WEB_ROOT; ?>">Home</a><span class="divider">/</span></li>
+        <li><a href="<?php echo WEB_ROOT; ?>">Home</a><span class="divider"></span></li>
         <li><a href="<?php echo url('collections'); ?>"></a></li>
         <li><a href="<?php echo url(array('controller' => 'items', 'action' => 'show', 'id' => $this->doc->getId()), 'id'); ?>"><?php echo $this->doc->getTitle(); ?></a><span class="divider">/</span></li>
         <li><?php echo metadata($file, array('Dublin Core', 'Title')); ?></li>
     </ul>
     <div id="scripto-transcribe" class="scripto">
-        <!-- navigation -->
-        <ul class="nav nav-tabs">
-            <li class="active"><a href="#"><?php echo __('Differences'); ?></a></li>
-        <?php if ($this->scripto->isLoggedIn()): ?>
-            <li><span><?php echo __('Logged in as %s', '<a href="' . html_escape(url('scripto')) . '">' . $this->scripto->getUserName() . '</a>'); ?></span></li>
-            <li><span>(<a href="<?php echo html_escape(url('scripto/index/logout')); ?>"><?php echo __('logout'); ?></a>)</span></li>
-            <li><a href="<?php echo html_escape(url('scripto/watchlist')); ?>"><?php echo __('Your watchlist'); ?></a> </li>
-        <?php else: ?>
-            <li><a href="<?php echo html_escape(url('scripto/index/login')); ?>"><?php echo __('Log in to Scripto'); ?></a></li>
-        <?php endif; ?>
-            <li><a href="<?php echo html_escape(url('scripto/recent-changes')); ?>"><?php echo __('Recent changes'); ?></a></li>
-            <li><a href="<?php echo html_escape(url(array('controller' => 'items', 'action' => 'show', 'id' => $this->doc->getId()), 'id')); ?>"><?php echo __('View item'); ?></a></li>
-            <li><a href="<?php echo html_escape(url(array('controller' => 'files', 'action' => 'show', 'id' => $this->doc->getPageId()), 'id')); ?>"><?php echo __('View file'); ?></a></li>
-        </ul>
+        <!-- navigation removed -->
+    <!--  <ul class="nav nav-tabs">
+            <li class="active"><a href="#"><//?php echo __('Differences'); ?></a></li>
+        <//?php if ($this->scripto->isLoggedIn()): ?>
+            <li><span><//?php echo __('Logged in as %s', '<a href="' . html_escape(url('scripto')) . '">' . $this->scripto->getUserName() . '</a>'); ?></span></li>
+            <li><span>(<a href="<//?php echo html_escape(url('scripto/index/logout')); ?>"><?php echo __('logout'); ?></a>)</span></li>
+            <li><a href="<//?php echo html_escape(url('scripto/watchlist')); ?>"><?php echo __('Your watchlist'); ?></a> </li>
+        <//?php else: ?>
+            <li><a href="<//?php echo html_escape(url('scripto/index/login')); ?>"><?php echo __('Log in to Scripto'); ?></a></li>
+        <//?php endif; ?>
+            <li><a href="<//?php echo html_escape(url('scripto/recent-changes')); ?>"><?php echo __('Recent changes'); ?></a></li>
+            <li><a href="<//?php echo html_escape(url(array('controller' => 'items', 'action' => 'show', 'id' => $this->doc->getId()), 'id')); ?>"><?php echo __('View item'); ?></a></li>
+            <li><a href="<//?php echo html_escape(url(array('controller' => 'files', 'action' => 'show', 'id' => $this->doc->getPageId()), 'id')); ?>"><?php echo __('View file'); ?></a></li>
+        </ul>-->
 
         <h2><?php if ($this->doc->getTitle()): ?><?php echo $this->doc->getTitle(); ?><?php else: ?><?php echo __('Untitled Document'); ?><?php endif; ?></h2>
         <?php if ($this->scripto->canExport()): ?><div><?php echo $this->formButton('scripto-transcription-document-import', __('Import document'), array('style' => 'display:inline; float:none;')); ?></div><?php endif; ?>
@@ -374,6 +374,21 @@ jQuery(document).ready(function() {
 	<div class="transcribe-container">
         <div class="doc-column">
         <?php echo file_markup($this->file, array('imageSize' => 'fullsize')); ?>
+	<!-- this is maddy's attempt to create a quick tips. note: it is within .doc-column and uses jquery .hide and .show-->
+                <div id="transcription-tips">
+                     <h2 style="padding-left:10px" ><u>Instrucciones para transcribir
+</u></h2>
+                    <ul style="margin-top:0">
+                    <li>Escribe lo que ves en pdf, aunque esté deletreada o incorrecta</li>
+                    <li>Escribe el numero de la pagina si aparece</li>
+                    <li>Pon las palabras que no se entienden en corchetes, con un signo de interrogación, como: [palabra?]</li>
+                    <li>Haz click en “guardar cambios” frecuentemente</li>
+		    <li>Si aparece un guión al final de una linea, escribe la palabra completa, sin el guión.</li>
+		    <li>Si aparece un guión al final de la página, escribe la palabra completa en la segunda página, sin el guión.</li>	
+                    </ul>
+                </div>
+
+
 	</div>
         <!-- pagination -->
         <p>
