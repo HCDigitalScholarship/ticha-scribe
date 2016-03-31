@@ -6,16 +6,16 @@ if ($collectionTitle == '') {
 ?>
 
 <?php echo head(array('title'=> $collectionTitle, 'bodyclass' => 'collections show')); ?>
-
+<div class="container" style="width:100%;">
 <h1><?php echo $collectionTitle; ?></h1>
 
     <div id="description" class="element">
         <div class="element-text"><?php echo metadata('collection', array('Dublin Core', 'Description')); ?></div>
     </div><!-- end description -->
-
+    
     <div id="collection-items span12">
 
-        <ul class="thumbnails">
+        <ul class="thumbnails" style="list-style:none;">
         <?php
         $collection_items = get_records('Item',
             array(
@@ -29,14 +29,14 @@ if ($collectionTitle == '') {
         foreach (loop('items') as $item) :
             set_current_record('item', $item);
             if (metadata($item, 'has thumbnail')): ?>
-            <li>
+            <li style="margin-left: 10px;">
                 <div id="col-images" class="thumbnail right-caption span4">
                     <?php echo link_to_item(item_image('square_thumbnail', array(
                             'alt' => metadata($item, array('Dublin Core', 'Title')),
                             'class' => 'span2',
                         ))); ?>
                     <div class="caption">
-                        <?php echo link_to_item(metadata($item, array('Dublin Core', 'Title'), array('snippet' => 60)), array('class'=>'permalink')); ?><br /><br />
+                        <?php echo link_to_item(metadata($item, array('Dublin Core', 'Title'), array('snippet' => 60)), array('class'=>'permalink')); ?>
                         <div id="col-progress">
                             <?php
                                 // Set statuses.
@@ -69,4 +69,5 @@ if ($collectionTitle == '') {
         <?php endforeach; ?>
         </ul>
     </div><!-- end collection-items -->
+    </div>
 <?php echo foot(); ?>

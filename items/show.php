@@ -16,9 +16,10 @@ $collection = get_collection_for_item();
     <h1><?php echo metadata('item', array('Dublin Core', 'Title')); ?></h1>
 
     <!-- The following returns all of the files associated with an item. -->
-    <div id="itemfiles" class="element">
-
-        <div class="element-text">
+   <!-- <div id="itemfiles" class="element">-->
+<div>
+       <!-- <div class="element-text">-->
+<div>
             <?php
             require_once PLUGIN_DIR . '/Scripto/libraries/Scripto.php';
            // require_once APP_DIR . '/helpers/Media.php';
@@ -26,7 +27,7 @@ $collection = get_collection_for_item();
             // $helper = new Omeka_View_Helper_Media;
             $files =  return_files_for_item(array()); ?>
 
-            <ul class="thumbnails">
+            <ul class="thumbnails" style="margin: 0 auto;">
             <?php foreach ($files as $file) :
                 $status = $scripto->getPageTranscriptionStatus($file->id);
 
@@ -53,8 +54,8 @@ $collection = get_collection_for_item();
                      $fileTitle .= '<br /><br />';
                  }
              ?>
-                <li class="span2">
-                    <div class="thumbnail">
+                <li class="span2" style="display: inline-block; vertical-align: top; width: 10%;">
+                    <div class="thumbnail thumbnail-smaller">
                         <a href="<?php echo url(array('action' => 'transcribe', 'item-id' => $file->item_id, 'file-id' => $file->id), 'scripto_action_item_file'); ?>">
                             <?php echo file_image('square_thumbnail', array(), $file); ?>
                         </a>

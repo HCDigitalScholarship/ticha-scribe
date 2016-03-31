@@ -386,6 +386,10 @@ jQuery(document).ready(function() {
 		    <li>Si aparece un guión al final de una linea, escribe la palabra completa, sin el guión.</li>
 		    <li>Si aparece un guión al final de la página, escribe la palabra completa en la segunda página, sin el guión.</li>	
                     </ul>
+		     <h2 style="padding-left:10px" ><u>Recursos Por Transcribir</u></h2>
+		    <ul style="margin-top:0">
+		    <li><a href="http://spanishpaleographytool.org/">Spanish Paleography Tool</a></li>
+		    <li><a href="http://www.iifilologicas.unam.mx/dicabenovo">Diccionario de Abreviaturas Novohispanas</a></li>
                 </div>
 
 

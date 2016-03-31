@@ -299,7 +299,7 @@ h2 { color: #6A231F; }
 
 #col-images {
     width: 250px;
-    height: 125px;
+    height: 100%;
 }
 
 .thumbnail.right-caption {
@@ -599,11 +599,11 @@ hr {
 .navbar.navbar-inverse {
 	background-color: #ac2a13;
 }
-nscribe-container {
+/*.transcribe-container {
 width:100%;
 height:100%;
 display:table-cell
-}
+}*/
 
 .doc-column {
 height:100%;
@@ -624,4 +624,5 @@ margin-top:7px;
 margin-bottom:7px;
 padding:2px 3px 3px 5px;
 background:#fff
+
 }
