@@ -13,7 +13,7 @@ $collection = get_collection_for_item();
       <li class="active"><?php echo metadata('item', array('Dublin Core', 'Title')); ?></li>
     </ul>
 
-    <h1><?php echo metadata('item', array('Dublin Core', 'Title')); ?></h1>
+    <h1><?php echo metadata('item', array('Item Type Metadata', 'Título')); ?></h1>
 
     <!-- The following returns all of the files associated with an item. -->
    <!-- <div id="itemfiles" class="element">-->
