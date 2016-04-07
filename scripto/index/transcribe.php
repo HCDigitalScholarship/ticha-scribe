@@ -339,7 +339,7 @@ jQuery(document).ready(function() {
         <li><a href="<?php echo WEB_ROOT; ?>">Home</a><span class="divider"></span></li>
         <li><a href="<?php echo url('collections'); ?>"></a></li>
         <li><a href="<?php echo url(array('controller' => 'items', 'action' => 'show', 'id' => $this->doc->getId()), 'id'); ?>"><?php echo $this->doc->getTitle(); ?></a><span class="divider">/</span></li>
-        <li><?php echo metadata($file, array('Item Type Metadata', 'Título')); ?></li>
+        <li><?php echo metadata($file, array('Dublin Core', 'Title')); ?></li>
     </ul>
     <div id="scripto-transcribe" class="scripto">
         <!-- navigation removed -->
