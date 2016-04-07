@@ -349,23 +349,23 @@ jQuery(document).ready(function() {
             <li class="active"><a href="#"><//?php echo __('Differences'); ?></a></li>
         <//?php if ($this->scripto->isLoggedIn()): ?>
             <li><span><//?php echo __('Logged in as %s', '<a href="' . html_escape(url('scripto')) . '">' . $this->scripto->getUserName() . '</a>'); ?></span></li>
-            <li><span>(<a href="<//?php echo html_escape(url('scripto/index/logout')); ?>"><?php echo __('logout'); ?></a>)</span></li>
-            <li><a href="<//?php echo html_escape(url('scripto/watchlist')); ?>"><?php echo __('Your watchlist'); ?></a> </li>
+            <li><span>(<a href="<//?php echo html_escape(url('scripto/index/logout')); ?>"><//?php echo __('logout'); ?></a>)</span></li>
+            <li><a href="<//?php echo html_escape(url('scripto/watchlist')); ?>"><..?php echo __('Your watchlist'); ?></a> </li>
         <//?php else: ?>
-            <li><a href="<//?php echo html_escape(url('scripto/index/login')); ?>"><?php echo __('Log in to Scripto'); ?></a></li>
+            <li><a href="<//?php echo html_escape(url('scripto/index/login')); ?>"><//?php echo __('Log in to Scripto'); ?></a></li>
         <//?php endif; ?>
-            <li><a href="<//?php echo html_escape(url('scripto/recent-changes')); ?>"><?php echo __('Recent changes'); ?></a></li>
-            <li><a href="<//?php echo html_escape(url(array('controller' => 'items', 'action' => 'show', 'id' => $this->doc->getId()), 'id')); ?>"><?php echo __('View item'); ?></a></li>
-            <li><a href="<//?php echo html_escape(url(array('controller' => 'files', 'action' => 'show', 'id' => $this->doc->getPageId()), 'id')); ?>"><?php echo __('View file'); ?></a></li>
+            <li><a href="<//?php echo html_escape(url('scripto/recent-changes')); ?>"><//?php echo __('Recent changes'); ?></a></li>
+            <li><a href="<//?php echo html_escape(url(array('controller' => 'items', 'action' => 'show', 'id' => $this->doc->getId()), 'id')); ?>"><//?php echo __('View item'); ?></a></li>
+            <li><a href="<//?php echo html_escape(url(array('controller' => 'files', 'action' => 'show', 'id' => $this->doc->getPageId()), 'id')); ?>"><//?php echo __('View file'); ?></a></li>
         </ul>-->
-
-        <h2><?php if ($this->doc->getTitle()): ?><?php echo $this->doc->getTitle(); ?><?php else: ?><?php echo __('Untitled Document'); ?><?php endif; ?></h2>
+        <h2><?php echo metadata($this->item, array('Item Type Metadata', 'Título')); ?></h2>
+        <!--<h2><//?php if ($this->doc->getTitle()): ?><//?php echo $this->doc->getTitle(); ?><//?php else: ?><//?php echo __('Untitled Document'); ?><//?php endif; ?></h2> -->
         <?php if ($this->scripto->canExport()): ?><div><?php echo $this->formButton('scripto-transcription-document-import', __('Import document'), array('style' => 'display:inline; float:none;')); ?></div><?php endif; ?>
         <h3><?php echo $this->doc->getPageName(); ?></h3>
 
         <div>
-            <div><strong><?php echo metadata($this->file, array('Dublin Core', 'Title')); ?></strong></div>
-            <div>Imagen<?php echo html_escape($this->paginationUrls['current_page_number']); ?> of <?php echo html_escape($this->paginationUrls['number_of_pages']); ?></div>
+            <!--<div><strong><//?php echo metadata($this->file, array('Dublin Core', 'Title')); ?></strong></div> -->
+            <div>Imagen <?php echo html_escape($this->paginationUrls['current_page_number']); ?> of <?php echo html_escape($this->paginationUrls['number_of_pages']); ?></div>
             <div>
                 <?php //echo metadata($this->$file, array('Dublin Core', 'Source')); ?>
                 <?php //echo metadata($item, array('Dublin Core', 'Relation')); ?>
@@ -431,7 +431,7 @@ jQuery(document).ready(function() {
         <?php endif; ?>
 
             <h2><?php echo __('Transcripción'); ?>
-            <?php if ($this->doc->canEditTranscriptionPage()): ?> [<a href="#" id="scripto-transcription-edit-show"><?php echo __('Guarar'); ?></a>]<?php endif; ?>
+            <?php if ($this->doc->canEditTranscriptionPage()): ?> [<a href="#" id="scripto-transcription-edit-show"><?php echo __('Guardar'); ?></a>]<?php endif; ?>
             <?php if ($this->scripto->canProtect()): ?> [<a href="<?php echo html_escape($this->doc->getTranscriptionPageMediawikiUrl()); ?>"><?php echo __('wiki'); ?></a>]<?php endif; ?>
             [<a href="<?php echo html_escape(url(array('item-id' => $this->doc->getId(), 'file-id' => $this->doc->getPageId(), 'namespace-index' => 0), 'scripto_history')); ?>"><?php echo __('História'); ?></a>]</h2>
             <div>
