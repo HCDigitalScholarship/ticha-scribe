@@ -334,13 +334,15 @@ jQuery(document).ready(function() {
 <?php endif; ?>
 <div id="primary">
 <?php echo flash(); ?>
-
-    <ul class="breadcrumb">
-        <li><a href="<?php echo WEB_ROOT; ?>">Home</a><span class="divider"></span></li>
-        <li><a href="<?php echo url('collections'); ?>"></a></li>
-        <li><a href="<?php echo url(array('controller' => 'items', 'action' => 'show', 'id' => $this->doc->getId()), 'id'); ?>"><?php echo $this->doc->getTitle(); ?></a><span class="divider">/</span></li>
-        <li><?php echo metadata($file, array('Dublin Core', 'Title')); ?></li>
+<!-- breadcrumb removed -->
+<!--    <ul class="breadcrumb">
+        <li><a href="<//?php echo WEB_ROOT; ?>">Home</a><span class="divider"></span></li>
+        <li><a href="<//?php echo url('collections'); ?>"></a></li>
+        <li><a href="<//?php echo url(array('controller' => 'items', 'action' => 'show', 'id' => $this->doc->getId()), 'id'); ?>"><?php echo $this->doc->getTitle(); ?></a><span class="divider">/</span></li>
+        <li><//?php echo metadata($file, array('Dublin Core', 'Title')); ?></li>
     </ul>
+  -->
+<!-- breadcrumb is bod -->
     <div id="scripto-transcribe" class="scripto">
         <!-- navigation removed -->
     <!--  <ul class="nav nav-tabs">
