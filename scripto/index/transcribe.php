@@ -15,7 +15,7 @@ jQuery(document).ready(function() {
     jQuery('#scripto-transcription-page-edit').click(function() {
         jQuery('#scripto-transcription-page-edit').
             prop('disabled', true).
-            text('<?php echo __('Editing transcription...'); ?>');
+            text('<?php echo __('Editando transcripción...'); ?>');
         jQuery.post(
             <?php echo js_escape(url('scripto/index/page-action')); ?>,
             {
@@ -38,7 +38,7 @@ jQuery(document).ready(function() {
     jQuery('#scripto-talk-page-edit').click(function() {
         jQuery('#scripto-talk-page-edit').
             prop('disabled', true).
-            text('<?php echo __('Editing discussion...'); ?>');
+            text('<?php echo __('Editando discusión...'); ?>');
         jQuery.post(
             <?php echo js_escape(url('scripto/index/page-action')); ?>,
             {
@@ -60,11 +60,11 @@ jQuery(document).ready(function() {
     // Handle default transcription/talk visibility.
     if (window.location.hash == '#discussion') {
         jQuery('#scripto-transcription').hide();
-        jQuery('#scripto-page-show').text('<?php echo __('show transcription'); ?>');
+        jQuery('#scripto-page-show').text('<?php echo __('mostrar transcripción'); ?>');
     } else {
         window.location.hash = '#transcription'
         jQuery('#scripto-talk').hide();
-        jQuery('#scripto-page-show').text('<?php echo __('show discussion'); ?>');
+        jQuery('#scripto-page-show').text('<?php echo __('mostrar discusión'); ?>');
     }
 
     // Handle transcription/talk visibility.
@@ -74,12 +74,12 @@ jQuery(document).ready(function() {
             window.location.hash = '#discussion';
             jQuery('#scripto-transcription').hide();
             jQuery('#scripto-talk').show();
-            jQuery('#scripto-page-show').text('<?php echo __('show transcription'); ?>');
+            jQuery('#scripto-page-show').text('<?php echo __('mostrar transcripción'); ?>');
         } else {
             window.location.hash = '#transcription';
             jQuery('#scripto-talk').hide();
             jQuery('#scripto-transcription').show();
-            jQuery('#scripto-page-show').text('<?php echo __('show discussion'); ?>');
+            jQuery('#scripto-page-show').text('<?php echo __('mostrar discusión'); ?>');
         }
     });
 
@@ -91,7 +91,7 @@ jQuery(document).ready(function() {
             jQuery(this).text('<?php echo __('hide edit'); ?>');
             jQuery('#scripto-transcription-edit').slideDown('fast');
         } else {
-            jQuery(this).text('<?php echo __('edit'); ?>');
+            jQuery(this).text('<?php echo __('editar'); ?>');
             jQuery('#scripto-transcription-edit').slideUp('fast');
         }
         jQuery(this).data("clicks", !clicks);
@@ -105,7 +105,7 @@ jQuery(document).ready(function() {
             jQuery(this).text('<?php echo __('hide edit'); ?>');
             jQuery('#scripto-talk-edit').slideDown('fast');
         } else {
-            jQuery(this).text('<?php echo __('edit'); ?>');
+            jQuery(this).text('<?php echo __('mostrar discusión'); ?>');
             jQuery('#scripto-talk-edit').slideUp('fast');
         }
         jQuery(this).data("clicks", !clicks);
@@ -339,7 +339,7 @@ jQuery(document).ready(function() {
         <li><a href="<?php echo WEB_ROOT; ?>">Home</a><span class="divider"></span></li>
         <li><a href="<?php echo url('collections'); ?>"></a></li>
         <li><a href="<?php echo url(array('controller' => 'items', 'action' => 'show', 'id' => $this->doc->getId()), 'id'); ?>"><?php echo $this->doc->getTitle(); ?></a><span class="divider">/</span></li>
-        <li><?php echo metadata($file, array('Dublin Core', 'Title')); ?></li>
+        <li><?php echo metadata($file, array('Item Type Metadata', 'Título')); ?></li>
     </ul>
     <div id="scripto-transcribe" class="scripto">
         <!-- navigation removed -->
@@ -362,7 +362,7 @@ jQuery(document).ready(function() {
         <h3><?php echo $this->doc->getPageName(); ?></h3>
 
         <div>
-            <div><strong><?php echo metadata($this->file, array('Dublin Core', 'Title')); ?></strong></div>
+            <div><strong><?php echo metadata($this->file, array('Item Type Metadata', 'Título')); ?></strong></div>
             <div>image <?php echo html_escape($this->paginationUrls['current_page_number']); ?> of <?php echo html_escape($this->paginationUrls['number_of_pages']); ?></div>
             <div>
                 <?php //echo metadata($this->$file, array('Dublin Core', 'Source')); ?>
@@ -384,7 +384,7 @@ jQuery(document).ready(function() {
                     <li>Pon las palabras que no se entienden en corchetes, con un signo de interrogación, como: [palabra?]</li>
                     <li>Haz click en “guardar cambios” frecuentemente</li>
 		    <li>Si aparece un guión al final de una linea, escribe la palabra completa, sin el guión.</li>
-		    <li>Si aparece un guión al final de la página, escribe la palabra completa en la segunda página, sin el guión.</li>	
+		    <li>Si aparece un guión al final de la página, escribe la palabra completa en la segunda página, sin el guión.</li>
                     </ul>
 		     <h2 style="padding-left:10px" ><u>Recursos para la transcripción</u></h2>
 		    <ul style="margin-top:0">
@@ -396,8 +396,8 @@ jQuery(document).ready(function() {
 	</div>
         <!-- pagination -->
         <p>
-        <?php if (isset($this->paginationUrls['previous'])): ?><a href="<?php echo html_escape($this->paginationUrls['previous']); ?>">&#171; <?php echo __('previous page'); ?></a><?php else: ?>&#171; <?php echo __('previous page'); ?><?php endif; ?>
-         | <?php if (isset($this->paginationUrls['next'])): ?><a href="<?php echo html_escape($this->paginationUrls['next']); ?>"><?php echo __('next page'); ?> &#187;</a><?php else: ?><?php echo __('next page'); ?> &#187;<?php endif; ?>
+        <?php if (isset($this->paginationUrls['previous'])): ?><a href="<?php echo html_escape($this->paginationUrls['previous']); ?>">&#171; <?php echo __('la pagina anterior'); ?></a><?php else: ?>&#171; <?php echo __('la pagina anterior'); ?><?php endif; ?>
+         | <?php if (isset($this->paginationUrls['next'])): ?><a href="<?php echo html_escape($this->paginationUrls['next']); ?>"><?php echo __('la próxima pagina'); ?> &#187;</a><?php else: ?><?php echo __('la próxima pagina'); ?> &#187;<?php endif; ?>
          | <a href="#" id="scripto-page-show"></a>
         </p>
 
@@ -420,7 +420,7 @@ jQuery(document).ready(function() {
                 <div><?php echo $this->formTextarea('scripto-transcription-page-wikitext', $this->doc->getTranscriptionPageWikitext(), array('cols' => '76', 'rows' => '16')); ?></div>
                 <?php endif; ?>
                 <div>
-                    <?php echo $this->formButton('scripto-transcription-page-edit', __('Edit transcription'), array('style' => 'display:inline; float:none;')); ?>
+                    <?php echo $this->formButton('scripto-transcription-page-edit', __('Guardar'), array('style' => 'display:inline; float:none;')); ?>
                 </div>
                 <p><a href="http://www.mediawiki.org/wiki/Help:Formatting" target="_blank"><?php echo __('wiki formatting help'); ?></a></p>
             </div><!-- #scripto-transcription-edit -->
@@ -429,9 +429,9 @@ jQuery(document).ready(function() {
         <?php endif; ?>
 
             <h2><?php echo __('Transcripcion'); ?>
-            <?php if ($this->doc->canEditTranscriptionPage()): ?> [<a href="#" id="scripto-transcription-edit-show"><?php echo __('edit'); ?></a>]<?php endif; ?>
+            <?php if ($this->doc->canEditTranscriptionPage()): ?> [<a href="#" id="scripto-transcription-edit-show"><?php echo __('getTranscriptionPageMediawikiUrl'); ?></a>]<?php endif; ?>
             <?php if ($this->scripto->canProtect()): ?> [<a href="<?php echo html_escape($this->doc->getTranscriptionPageMediawikiUrl()); ?>"><?php echo __('wiki'); ?></a>]<?php endif; ?>
-            [<a href="<?php echo html_escape(url(array('item-id' => $this->doc->getId(), 'file-id' => $this->doc->getPageId(), 'namespace-index' => 0), 'scripto_history')); ?>"><?php echo __('history'); ?></a>]</h2>
+            [<a href="<?php echo html_escape(url(array('item-id' => $this->doc->getId(), 'file-id' => $this->doc->getPageId(), 'namespace-index' => 0), 'scripto_history')); ?>"><?php echo __('História'); ?></a>]</h2>
             <div>
                 <?php if ($this->scripto->isLoggedIn()): ?><?php echo $this->formButton('scripto-page-watch'); ?> <?php endif; ?>
                 <?php if ($this->scripto->canProtect()): ?><?php echo $this->formButton('scripto-transcription-page-protect'); ?> <?php endif; ?>
@@ -450,7 +450,7 @@ jQuery(document).ready(function() {
                 <div>
                     <?php echo $this->formButton('scripto-talk-page-edit', __('Edit discussion'), array('style' => 'display:inline; float:none;')); ?>
                 </div>
-                <p><a href="http://www.mediawiki.org/wiki/Help:Formatting" target="_blank"><?php echo __('wiki formatting help'); ?></a></p>
+                <!--<p><a href="http://www.mediawiki.org/wiki/Help:Formatting" target="_blank"><#?php echo __('wiki formatting help'); ?></a></p>-->
             </div><!-- #scripto-talk-edit -->
             <?php else: ?>
             <p><?php echo __('You don\'t have permission to discuss this page.'); ?></p>
