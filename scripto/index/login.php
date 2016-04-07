@@ -22,7 +22,7 @@ echo head($head);
             <li><a href="<?php echo html_escape(url('scripto/recent-changes')); ?>"><?php echo __('Recent changes'); ?></a></li>
         </ul>
 -->
-	<p><a href="http://new-ticha.haverford.edu/mediawiki/index.php?title=Special:UserLogin&returnto=Main+Page&type=signup" target="_blank"><?php echo __('Create an account'); ?></a></p>
+	<p><a href="https://ticha.haverford.edu/mediawiki/index.php?title=Special:UserLogin&returnto=Main+Page&type=signup" target="_blank"><?php echo __('Create an account'); ?></a></p>
         <p><?php echo __(
             'Log in to Scripto using your MediaWiki username and password to access your account '
           . 'and enable certain Scripto features. Login may not be required by the administrator.'

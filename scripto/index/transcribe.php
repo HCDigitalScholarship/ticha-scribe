@@ -1,5 +1,5 @@
 <?php
-$titleArray = array(__('Scripto'), __('Transcribe Page'));
+$titleArray = array( __('Contribuir una transcripción'));
 $head = array('title' => html_escape(implode(' | ', $titleArray)));
 echo head($head);
 if (get_option('scripto_image_viewer') == 'openlayers') {
@@ -28,7 +28,7 @@ jQuery(document).ready(function() {
             function(data) {
                 jQuery('#scripto-transcription-page-edit').
                     prop('disabled', false).
-                    text('<?php echo __('Edit transcription'); ?>');
+                    text('<?php echo __('Guardar'); ?>');
                 jQuery('#scripto-transcription-page-html').html(data);
             }
         );
@@ -386,7 +386,7 @@ jQuery(document).ready(function() {
 		    <li>Si aparece un guión al final de una linea, escribe la palabra completa, sin el guión.</li>
 		    <li>Si aparece un guión al final de la página, escribe la palabra completa en la segunda página, sin el guión.</li>	
                     </ul>
-		     <h2 style="padding-left:10px" ><u>Recursos Por Transcribir</u></h2>
+		     <h2 style="padding-left:10px" ><u>Recursos para la transcripción</u></h2>
 		    <ul style="margin-top:0">
 		    <li><a href="http://spanishpaleographytool.org/">Spanish Paleography Tool</a></li>
 		    <li><a href="http://www.iifilologicas.unam.mx/dicabenovo">Diccionario de Abreviaturas Novohispanas</a></li>
@@ -428,7 +428,7 @@ jQuery(document).ready(function() {
             <p><?php echo __('You don\'t have permission to transcribe this page.'); ?></p>
         <?php endif; ?>
 
-            <h2><?php echo __('Current Page Transcription'); ?>
+            <h2><?php echo __('Transcripcion'); ?>
             <?php if ($this->doc->canEditTranscriptionPage()): ?> [<a href="#" id="scripto-transcription-edit-show"><?php echo __('edit'); ?></a>]<?php endif; ?>
             <?php if ($this->scripto->canProtect()): ?> [<a href="<?php echo html_escape($this->doc->getTranscriptionPageMediawikiUrl()); ?>"><?php echo __('wiki'); ?></a>]<?php endif; ?>
             [<a href="<?php echo html_escape(url(array('item-id' => $this->doc->getId(), 'file-id' => $this->doc->getPageId(), 'namespace-index' => 0), 'scripto_history')); ?>"><?php echo __('history'); ?></a>]</h2>

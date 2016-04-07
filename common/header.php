@@ -118,7 +118,7 @@
   English
 </a>-->
 
-				<p><h2><a href="http://new-ticha.haverford.edu/es/">Ticha</a></h2></p>
+				<p><h2><a href="https://ticha.haverford.edu/es/">Ticha</a></h2></p>
 				<p><h4>un explorador digital de texto para el zapoteco colonial</h4></p>
 
 			</div>
@@ -128,41 +128,41 @@
 				<li class="dropdown">
                   <a href="#" class="dropdown-toggle" data-toggle="dropdown">Acerca de Ticha<b class="caret"></b></a>
                   <ul class="dropdown-menu">
-                    <li><a href="http://new-ticha.haverford.edu/es/about.html">El proyecto</a></li>
-					<li><a href="http://new-ticha.haverford.edu/es/team.html">El equipo</a></li>
-					<li><a href="http://new-ticha.haverford.edu/es/acknowledgements.html">Agradecimientos</a></li>
-                    <li><a href="http://new-ticha.haverford.edu/es/form.html">Contacto</a></li>
+                    <li><a href="https://ticha.haverford.edu/es/about.html">El proyecto</a></li>
+					<li><a href="https://ticha.haverford.edu/es/team.html">El equipo</a></li>
+					<li><a href="https://ticha.haverford.edu/es/acknowledgements.html">Agradecimientos</a></li>
+                    <li><a href="https://ticha.haverford.edu/es/form.html">Contacto</a></li>
                   </ul>
 				  </li>
 				<li class="dropdown">
                   <a href="#" class="dropdown-toggle" data-toggle="dropdown">Zapoteco colonial<b class="caret"></b></a>
                   <ul class="dropdown-menu">
-                    <li><a href="http://new-ticha.haverford.edu/es/linguistic.html">Formación linguistica</a></li>
-                    <li><a href="http://new-ticha.haverford.edu/es/context.html">Contexto cultural</a></li>
+                    <li><a href="https://ticha.haverford.edu/es/linguistic.html">Formación linguistica</a></li>
+                    <li><a href="https://ticha.haverford.edu/es/context.html">Contexto cultural</a></li>
                   </ul>
 				</li>
 				<li class="dropdown">
                   <a href="texts.html" class="dropdown-toggle" data-toggle="dropdown">Explora los textos<b class="caret"></b></a>
                   <ul class="dropdown-menu">
-                    <li class="dropdown-header"><a href="http://new-ticha.haverford.edu/es/texts.html">Explora los textos</a></li>
+                    <li class="dropdown-header"><a href="https://ticha.haverford.edu/es/texts.html">Explora los textos</a></li>
 					<li class="divider"></li>
-                    <li class="dropdown-header"><a href="http://new-ticha.haverford.edu/es/arte.html">Arte en lengua zapoteca</a></li>
+                    <li class="dropdown-header"><a href="https://ticha.haverford.edu/es/arte.html">Arte en lengua zapoteca</a></li>
 					<!--<li><a href="cordova.html">About Juan de Cordova</a></li>-->
-				            <li><a href="http://new-ticha.haverford.edu/es/outline.html">Esquema</a></li>
-                    <li><a href="http://new-ticha.haverford.edu/es/arte_pdf.html">PDF</a></li>
-                    <li><a href="http://new-ticha.haverford.edu/es/sample_arte.html">El ejemplo de una página</a></li>
-                    <li><a href="http://new-ticha.haverford.edu/es/arte_original.html">Transcripción</a></li>
-                    <li><a href="http://new-ticha.haverford.edu/es/reg_spanish.html">Español regularizado</a></li>
+				            <li><a href="https://ticha.haverford.edu/es/outline.html">Esquema</a></li>
+                    <li><a href="https://ticha.haverford.edu/es/arte_pdf.html">PDF</a></li>
+                    <li><a href="https://ticha.haverford.edu/es/sample_arte.html">El ejemplo de una página</a></li>
+                    <li><a href="https://ticha.haverford.edu/es/arte_original.html">Transcripción</a></li>
+                    <li><a href="https://ticha.haverford.edu/es/reg_spanish.html">Español regularizado</a></li>
 					<li class="divider"></li>
-                    <li class="dropdown-header"><a href="http://new-ticha.haverford.edu/es/doctrina.html">Doctrina christiana en lengua castellana y çapoteca</a></li>
-					          <li><a href="http://new-ticha.haverford.edu/es/feria.html">Sobre Pedro de Feria</a></li>
-                    <li><a href="http://new-ticha.haverford.edu/es/doctrina_pdf.html">PDF</a></li>
-                    <li><a href="http://new-ticha.haverford.edu/es/sample_doctrina.html">El ejemplo de una página</a></li>
+                    <li class="dropdown-header"><a href="https://ticha.haverford.edu/es/doctrina.html">Doctrina christiana en lengua castellana y çapoteca</a></li>
+					          <li><a href="https://ticha.haverford.edu/es/feria.html">Sobre Pedro de Feria</a></li>
+                    <li><a href="https://ticha.haverford.edu/es/doctrina_pdf.html">PDF</a></li>
+                    <li><a href="https://ticha.haverford.edu/es/sample_doctrina.html">El ejemplo de una página</a></li>
 					<li class="divider"></li>
                     <li class="dropdown-header"><a href="http://new-ticha.haverford.edu/es/handwritten.html">Textos en manoescrita</a></li>
-                    <li><a href="http://new-ticha.haverford.edu/es/handwritten_texts.html">Manuscritos disponibles</a></li>
-                    <li><a href="http://new-ticha.haverford.edu/es/sample_handwritten.html">Ejemplos de manuscritos</a></li>
-                    <li><a href="http://new-ticha.haverford.edu/es/timeline.html">Cronología de los documentos</a></li>
+                    <li><a href="https://ticha.haverford.edu/es/handwritten_texts.html">Manuscritos disponibles</a></li>
+                    <li><a href="https://ticha.haverford.edu/es/sample_handwritten.html">Ejemplos de manuscritos</a></li>
+                    <li><a href="https://ticha.haverford.edu/es/timeline.html">Cronología de los documentos</a></li>
                   </ul>
 				</li>
 				<!--<li class="dropdown">
@@ -172,7 +172,7 @@
                     <li><a href="download.html">Download files</a></li>
                   </ul>
 				</li> -->
-        <li><a href="http://new-ticha.haverford.edu/es/bibliography.html">Bibliografía</a></li>
+        <li><a href="https://ticha.haverford.edu/es/bibliography.html">Bibliografía</a></li>
         <li>
             <a href="https://www.facebook.com/TichaColonialZapotecTextExplorer" target="blank" class="btn btn-social-icon btn-facebook">
                 <i class="fa fa-facebook fb-follow"></i>
