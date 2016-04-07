@@ -365,7 +365,7 @@ jQuery(document).ready(function() {
 
         <div>
             <div><strong><?php echo metadata($this->file, array('Dublin Core', 'Title')); ?></strong></div>
-            <div>image <?php echo html_escape($this->paginationUrls['current_page_number']); ?> of <?php echo html_escape($this->paginationUrls['number_of_pages']); ?></div>
+            <div>Imagen<?php echo html_escape($this->paginationUrls['current_page_number']); ?> of <?php echo html_escape($this->paginationUrls['number_of_pages']); ?></div>
             <div>
                 <?php //echo metadata($this->$file, array('Dublin Core', 'Source')); ?>
                 <?php //echo metadata($item, array('Dublin Core', 'Relation')); ?>
@@ -381,11 +381,11 @@ jQuery(document).ready(function() {
                      <h2 style="padding-left:10px" ><u>Instrucciones para transcribir
 </u></h2>
                     <ul style="margin-top:0">
-                    <li>Escribe lo que ves en pdf, aunque esté deletreada o incorrecta</li>
-                    <li>Escribe el numero de la pagina si aparece</li>
+                    <li>Escribe la palabra que ves en el PDF, aunque esté mal deletreada o incorrecta</li>
+                    <li>Escribe el numero de la página si aparece</li>
                     <li>Pon las palabras que no se entienden en corchetes, con un signo de interrogación, como: [palabra?]</li>
-                    <li>Haz click en “guardar cambios” frecuentemente</li>
-		    <li>Si aparece un guión al final de una linea, escribe la palabra completa, sin el guión.</li>
+                    <li>Haz click en “guardar” frecuentemente</li>
+		    <li>Si aparece un guión al final de una línea, escribe la palabra completa, sin el guión.</li>
 		    <li>Si aparece un guión al final de la página, escribe la palabra completa en la segunda página, sin el guión.</li>
                     </ul>
 		     <h2 style="padding-left:10px" ><u>Recursos para la transcripción</u></h2>
@@ -398,8 +398,8 @@ jQuery(document).ready(function() {
 	</div>
         <!-- pagination -->
         <p>
-        <?php if (isset($this->paginationUrls['previous'])): ?><a href="<?php echo html_escape($this->paginationUrls['previous']); ?>">&#171; <?php echo __('la pagina anterior'); ?></a><?php else: ?>&#171; <?php echo __('la pagina anterior'); ?><?php endif; ?>
-         | <?php if (isset($this->paginationUrls['next'])): ?><a href="<?php echo html_escape($this->paginationUrls['next']); ?>"><?php echo __('la próxima pagina'); ?> &#187;</a><?php else: ?><?php echo __('la próxima pagina'); ?> &#187;<?php endif; ?>
+        <?php if (isset($this->paginationUrls['previous'])): ?><a href="<?php echo html_escape($this->paginationUrls['previous']); ?>">&#171; <?php echo __('la página anterior'); ?></a><?php else: ?>&#171; <?php echo __('la página anterior'); ?><?php endif; ?>
+         | <?php if (isset($this->paginationUrls['next'])): ?><a href="<?php echo html_escape($this->paginationUrls['next']); ?>"><?php echo __('la próxima página'); ?> &#187;</a><?php else: ?><?php echo __('la próxima página'); ?> &#187;<?php endif; ?>
          | <a href="#" id="scripto-page-show"></a>
         </p>
 
@@ -424,13 +424,13 @@ jQuery(document).ready(function() {
                 <div>
                     <?php echo $this->formButton('scripto-transcription-page-edit', __('Guardar'), array('style' => 'display:inline; float:none;')); ?>
                 </div>
-                <p><a href="http://www.mediawiki.org/wiki/Help:Formatting" target="_blank"><?php echo __('wiki formatting help'); ?></a></p>
+                <!--<p><a href="http://www.mediawiki.org/wiki/Help:Formatting" target="_blank"><//?php echo __('wiki formatting help'); ?></a></p> -->
             </div><!-- #scripto-transcription-edit -->
         <?php else: ?>
             <p><?php echo __('You don\'t have permission to transcribe this page.'); ?></p>
         <?php endif; ?>
 
-            <h2><?php echo __('Transcripcion'); ?>
+            <h2><?php echo __('Transcripción'); ?>
             <?php if ($this->doc->canEditTranscriptionPage()): ?> [<a href="#" id="scripto-transcription-edit-show"><?php echo __('getTranscriptionPageMediawikiUrl'); ?></a>]<?php endif; ?>
             <?php if ($this->scripto->canProtect()): ?> [<a href="<?php echo html_escape($this->doc->getTranscriptionPageMediawikiUrl()); ?>"><?php echo __('wiki'); ?></a>]<?php endif; ?>
             [<a href="<?php echo html_escape(url(array('item-id' => $this->doc->getId(), 'file-id' => $this->doc->getPageId(), 'namespace-index' => 0), 'scripto_history')); ?>"><?php echo __('História'); ?></a>]</h2>
