@@ -159,7 +159,7 @@
                     <li><a href="https://ticha.haverford.edu/es/doctrina_pdf.html">PDF</a></li>
                     <li><a href="https://ticha.haverford.edu/es/sample_doctrina.html">El ejemplo de una página</a></li>
 					<li class="divider"></li>
-                    <li class="dropdown-header"><a href="http://new-ticha.haverford.edu/es/handwritten.html">Textos en manoescrita</a></li>
+                    <li class="dropdown-header"><a href="http://new-ticha.haverford.edu/es/handwritten.html">Textos manoscritos</a></li>
                     <li><a href="https://ticha.haverford.edu/es/handwritten_texts.html">Manuscritos disponibles</a></li>
                     <li><a href="https://ticha.haverford.edu/es/sample_handwritten.html">Ejemplos de manuscritos</a></li>
                     <li><a href="https://ticha.haverford.edu/es/timeline.html">Cronología de los documentos</a></li>

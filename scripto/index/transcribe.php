@@ -28,7 +28,7 @@ jQuery(document).ready(function() {
             function(data) {
                 jQuery('#scripto-transcription-page-edit').
                     prop('disabled', false).
-                    text('<?php echo __('Guardar'); ?>');
+                    text('<?php echo __('Editar'); ?>');
                 jQuery('#scripto-transcription-page-html').html(data);
             }
         );
@@ -417,7 +417,7 @@ jQuery(document).ready(function() {
                 </div>
                 <?php else: ?>
                 <div class="alert alert-info">
-                    <strong>This item is editable!</strong>
+                    <strong>Transcribe abajo.</strong>
                 </div><!--alert alert-info-->
                 <div><?php echo $this->formTextarea('scripto-transcription-page-wikitext', $this->doc->getTranscriptionPageWikitext(), array('cols' => '76', 'rows' => '16')); ?></div>
                 <?php endif; ?>
@@ -431,9 +431,9 @@ jQuery(document).ready(function() {
         <?php endif; ?>
 
             <h2><?php echo __('Transcripción'); ?>
-            <?php if ($this->doc->canEditTranscriptionPage()): ?> [<a href="#" id="scripto-transcription-edit-show"><?php echo __('Guardar'); ?></a>]<?php endif; ?>
+            <?php if ($this->doc->canEditTranscriptionPage()): ?> [<a href="#" id="scripto-transcription-edit-show"><?php echo __('Editar'); ?></a>]<?php endif; ?>
             <?php if ($this->scripto->canProtect()): ?> [<a href="<?php echo html_escape($this->doc->getTranscriptionPageMediawikiUrl()); ?>"><?php echo __('wiki'); ?></a>]<?php endif; ?>
-            [<a href="<?php echo html_escape(url(array('item-id' => $this->doc->getId(), 'file-id' => $this->doc->getPageId(), 'namespace-index' => 0), 'scripto_history')); ?>"><?php echo __('História'); ?></a>]</h2>
+            [<a href="<?php echo html_escape(url(array('item-id' => $this->doc->getId(), 'file-id' => $this->doc->getPageId(), 'namespace-index' => 0), 'scripto_history')); ?>"><?php echo __('Historia'); ?></a>]</h2>
             <div>
                 <?php if ($this->scripto->isLoggedIn()): ?><?php echo $this->formButton('scripto-page-watch'); ?> <?php endif; ?>
                 <?php if ($this->scripto->canProtect()): ?><?php echo $this->formButton('scripto-transcription-page-protect'); ?> <?php endif; ?>
