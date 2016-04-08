@@ -365,7 +365,7 @@ jQuery(document).ready(function() {
 
         <div>
             <!--<div><strong><//?php echo metadata($this->file, array('Dublin Core', 'Title')); ?></strong></div> -->
-            <div>Imagen <?php echo html_escape($this->paginationUrls['current_page_number']); ?> of <?php echo html_escape($this->paginationUrls['number_of_pages']); ?></div>
+            <div>Imagen <?php echo html_escape($this->paginationUrls['current_page_number']); ?> de <?php echo html_escape($this->paginationUrls['number_of_pages']); ?></div>
             <div>
                 <?php //echo metadata($this->$file, array('Dublin Core', 'Source')); ?>
                 <?php //echo metadata($item, array('Dublin Core', 'Relation')); ?>
