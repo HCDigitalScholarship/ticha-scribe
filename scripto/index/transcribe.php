@@ -381,17 +381,17 @@ jQuery(document).ready(function() {
                      <h2 style="padding-left:10px" ><u>Instrucciones para transcribir
 </u></h2>
                     <ul style="margin-top:0">
-                    <li>Escribe la palabra que ves en el PDF, aunque esté mal deletreada o incorrecta</li>
-                    <li>Escribe el numero de la página si aparece</li>
-                    <li>Pon las palabras que no se entienden en corchetes, con un signo de interrogación, como: [palabra?]</li>
-                    <li>Haz click en “guardar” frecuentemente</li>
+                    <li>Escriba las palabras como se leen en el PDF, aunque contienen errores ortográficos.</li>
+                    <li>Si la página contiene una enumeración, transcríbala.</li>
+                    <li>Si no entiende una palabra, transcríbala entre paréntesis, con un signo de interrogación: (palabra?)</li>
+                    <li>Haga click en "guardar" frecuentemente</li>
 		    <li>Si aparece un guión al final de una línea, escribe la palabra completa, sin el guión.</li>
 		    <li>Si aparece un guión al final de la página, escribe la palabra completa en la segunda página, sin el guión.</li>
                     </ul>
 		     <h2 style="padding-left:10px" ><u>Recursos para la transcripción</u></h2>
 		    <ul style="margin-top:0">
-		    <li><a href="http://spanishpaleographytool.org/">Spanish Paleography Tool</a></li>
-		    <li><a href="http://www.iifilologicas.unam.mx/dicabenovo">Diccionario de Abreviaturas Novohispanas</a></li>
+		    <li><a href="http://spanishpaleographytool.org/"target="blank">Spanish Paleography Tool</a></li>
+		    <li><a href="http://www.iifilologicas.unam.mx/dicabenovo"target="blank">Diccionario de Abreviaturas Novohispanas</a></li>
                 </div>
 
 
@@ -457,10 +457,10 @@ jQuery(document).ready(function() {
             <?php else: ?>
             <p><?php echo __('You don\'t have permission to discuss this page.'); ?></p>
             <?php endif; ?>
-            <h2><?php echo __('Current Page Discussion'); ?>
-            <?php if ($this->doc->canEditTalkPage()): ?> [<a href="#" id="scripto-talk-edit-show"><?php echo __('edit'); ?></a>]<?php endif; ?>
+            <h2><?php echo __('Discusión para esta página'); ?>
+            <?php if ($this->doc->canEditTalkPage()): ?> [<a href="#" id="scripto-talk-edit-show"><?php echo __('editar'); ?></a>]<?php endif; ?>
             <?php if ($this->scripto->canProtect()): ?> [<a href="<?php echo html_escape($this->doc->getTalkPageMediawikiUrl()); ?>"><?php echo __('wiki'); ?></a>]<?php endif; ?>
-            [<a href="<?php echo html_escape(url(array('item-id' => $this->doc->getId(), 'file-id' => $this->doc->getPageId(), 'namespace-index' => 1), 'scripto_history')); ?>"><?php echo __('history'); ?></a>]</h2>
+            [<a href="<?php echo html_escape(url(array('item-id' => $this->doc->getId(), 'file-id' => $this->doc->getPageId(), 'namespace-index' => 1), 'scripto_history')); ?>"><?php echo __('historia'); ?></a>]</h2>
             <div>
                 <?php if ($this->scripto->canProtect()): ?><?php echo $this->formButton('scripto-talk-page-protect'); ?> <?php endif; ?>
             </div>
