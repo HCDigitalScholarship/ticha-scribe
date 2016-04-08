@@ -88,7 +88,7 @@ jQuery(document).ready(function() {
         event.preventDefault();
         var clicks = jQuery(this).data('clicks');
         if (!clicks) {
-            jQuery(this).text('<?php echo __('hide edit'); ?>');
+            //jQuery(this).text('<?php echo __('hide edit'); ?>');
             jQuery('#scripto-transcription-edit').slideDown('fast');
         } else {
             jQuery(this).text('<?php echo __('editar'); ?>');
@@ -102,7 +102,7 @@ jQuery(document).ready(function() {
         event.preventDefault();
         var clicks = jQuery(this).data('clicks');
         if (!clicks) {
-            jQuery(this).text('<?php echo __('hide edit'); ?>');
+            // jQuery(this).text('<?php echo __('hide edit'); ?>');
             jQuery('#scripto-talk-edit').slideDown('fast');
         } else {
             jQuery(this).text('<?php echo __('mostrar discusión'); ?>');
@@ -390,8 +390,8 @@ jQuery(document).ready(function() {
                     </ul>
 		     <h2 style="padding-left:10px" ><u>Recursos para la transcripción</u></h2>
 		    <ul style="margin-top:0">
-		    <li><a href="http://spanishpaleographytool.org/"target="blank">Spanish Paleography Tool</a></li>
-		    <li><a href="http://www.iifilologicas.unam.mx/dicabenovo"target="blank">Diccionario de Abreviaturas Novohispanas</a></li>
+		    <li><a href="http://spanishpaleographytool.org/"target="_blank">Spanish Paleography Tool</a></li>
+		    <li><a href="http://www.iifilologicas.unam.mx/dicabenovo"target="_blank">Diccionario de Abreviaturas Novohispanas</a></li>
                 </div>
 
 
