@@ -385,9 +385,8 @@ jQuery(document).ready(function() {
                     <li>Si la página contiene una enumeración, transcríbala.</li>
                     <li>Si no entiende una palabra, transcríbala entre paréntesis, con un signo de interrogación: (palabra?)</li>
                     <li>Haga click en "guardar" frecuentemente</li>
-		    <li>Si aparece un guión al final de una línea, escribe la palabra completa, sin el guión.</li>
-		    <li>Si aparece un guión al final de la página, escribe la palabra completa en la segunda página, sin el guión.</li>
-                    </ul>
+                    <li>Complete las abreviaturas en corchetes: "p[eso]s".</li>
+		            </ul>
 		     <h2 style="padding-left:10px" ><u>Recursos para la transcripción</u></h2>
 		    <ul style="margin-top:0">
 		    <li><a href="http://spanishpaleographytool.org/"target="_blank">Spanish Paleography Tool</a></li>
