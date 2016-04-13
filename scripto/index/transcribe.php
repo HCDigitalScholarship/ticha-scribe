@@ -88,7 +88,7 @@ jQuery(document).ready(function() {
         event.preventDefault();
         var clicks = jQuery(this).data('clicks');
         if (!clicks) {
-            //jQuery(this).text('<?php echo __('hide edit'); ?>');
+            jQuery(this).text('<?php echo __('cerrar'); ?>');
             jQuery('#scripto-transcription-edit').slideDown('fast');
         } else {
             jQuery(this).text('<?php echo __('editar'); ?>');
@@ -361,7 +361,7 @@ jQuery(document).ready(function() {
         <h2><?php echo metadata($this->item, array('Item Type Metadata', 'Título')); ?></h2>
         <!--<h2><//?php if ($this->doc->getTitle()): ?><//?php echo $this->doc->getTitle(); ?><//?php else: ?><//?php echo __('Untitled Document'); ?><//?php endif; ?></h2> -->
         <?php if ($this->scripto->canExport()): ?><div><?php echo $this->formButton('scripto-transcription-document-import', __('Import document'), array('style' => 'display:inline; float:none;')); ?></div><?php endif; ?>
-        <h3><?php echo $this->doc->getPageName(); ?></h3>
+        <!-- <h3><//?php echo $this->doc->getPageName(); ?></h3>-->
 
         <div>
             <!--<div><strong><//?php echo metadata($this->file, array('Dublin Core', 'Title')); ?></strong></div> -->
@@ -382,10 +382,10 @@ jQuery(document).ready(function() {
 </u></h2>
                     <ul style="margin-top:0">
                     <li>Escriba las palabras como se leen en el PDF, aunque contienen errores ortográficos.</li>
-                    <li>Si la página contiene una enumeración, transcríbala.</li>
+                    <li>Escribe el numero de la página si aparece</li>
                     <li>Si no entiende una palabra, transcríbala entre paréntesis, con un signo de interrogación: (palabra?)</li>
                     <li>Haga click en "guardar" frecuentemente</li>
-                    <li>Complete las abreviaturas en corchetes: "p[eso]s".</li>
+                    <li>Complete las abreviaturas en corchetes: "p[eso]s"</li>
 		            </ul>
 		     <h2 style="padding-left:10px" ><u>Recursos para la transcripción</u></h2>
 		    <ul style="margin-top:0">
