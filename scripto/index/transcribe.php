@@ -376,7 +376,7 @@ jQuery(document).ready(function() {
 	<div class="transcribe-container container-fluid">
 	<div class="row">
      <!--   <div class="doc-column col-md-6 col-xs-6">-->
-	<div class="col-md-7 col-sm-7 col-xs-7">
+	<div class="col-md-7 col-sm-7">
         <?php echo file_markup($this->file, array('imageSize' => 'fullsize')); ?>
 	<!-- this is maddy's attempt to create a quick tips. note: it is within .doc-column and uses jquery .hide and .show-->
               <!--  <div id="transcription-tips .col-md-4">
@@ -399,7 +399,7 @@ jQuery(document).ready(function() {
 	</div>
         <!-- pagination -->
 <!--	<div class="transcribe-column col-md-6 col-xs-6">-->
-	<div class="col-md-5 col-sm-5 col-xs-5">
+	<div class="col-md-5 col-sm-5">
         <p>
         <?php if (isset($this->paginationUrls['previous'])): ?><a href="<?php echo html_escape($this->paginationUrls['previous']); ?>">&#171; <?php echo __('la página anterior'); ?></a><?php else: ?>&#171; <?php echo __('la página anterior'); ?><?php endif; ?>
          | <?php if (isset($this->paginationUrls['next'])): ?><a href="<?php echo html_escape($this->paginationUrls['next']); ?>"><?php echo __('la próxima página'); ?> &#187;</a><?php else: ?><?php echo __('la próxima página'); ?> &#187;<?php endif; ?>
@@ -448,7 +448,7 @@ jQuery(document).ready(function() {
 	</div> <!--row-->
 	<div class="row">
 	<!-- this is maddy's attempt to create a quick tips. note: it is within .doc-column and uses jquery .hide and .show-->
-                <div id="transcription-tips col-md-4 col-sm-4 col-xs-4">
+                <div id="transcription-tips col-md-4 col-sm-4">
                      <h2 style="padding-left:10px" ><u>Instrucciones para transcribir
 </u></h2>
                     <ul style="margin-top:0">
