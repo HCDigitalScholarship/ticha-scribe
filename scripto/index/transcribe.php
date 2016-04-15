@@ -28,7 +28,7 @@ jQuery(document).ready(function() {
             function(data) {
                 jQuery('#scripto-transcription-page-edit').
                     prop('disabled', false).
-                    text('<?php echo __('Editar'); ?>');
+                    text('<?php echo __('Guardar'); ?>');
                 jQuery('#scripto-transcription-page-html').html(data);
             }
         );
@@ -373,11 +373,13 @@ jQuery(document).ready(function() {
         </div>
 
         <!-- document viewer -->
-	<div class="transcribe-container">
-        <div class="doc-column">
+	<div class="transcribe-container container-fluid">
+	<div class="row">
+     <!--   <div class="doc-column col-md-6 col-xs-6">-->
+	<div class="col-md-7 col-sm-7 col-xs-7">
         <?php echo file_markup($this->file, array('imageSize' => 'fullsize')); ?>
 	<!-- this is maddy's attempt to create a quick tips. note: it is within .doc-column and uses jquery .hide and .show-->
-                <div id="transcription-tips">
+              <!--  <div id="transcription-tips .col-md-4">
                      <h2 style="padding-left:10px" ><u>Instrucciones para transcribir
 </u></h2>
                     <ul style="margin-top:0">
@@ -391,11 +393,13 @@ jQuery(document).ready(function() {
 		    <ul style="margin-top:0">
 		    <li><a href="http://spanishpaleographytool.org/"target="_blank">Spanish Paleography Tool</a></li>
 		    <li><a href="http://www.iifilologicas.unam.mx/dicabenovo"target="_blank">Diccionario de Abreviaturas Novohispanas</a></li>
-                </div>
+                </div> -->
 
 
 	</div>
         <!-- pagination -->
+<!--	<div class="transcribe-column col-md-6 col-xs-6">-->
+	<div class="col-md-5 col-sm-5 col-xs-5">
         <p>
         <?php if (isset($this->paginationUrls['previous'])): ?><a href="<?php echo html_escape($this->paginationUrls['previous']); ?>">&#171; <?php echo __('la página anterior'); ?></a><?php else: ?>&#171; <?php echo __('la página anterior'); ?><?php endif; ?>
          | <?php if (isset($this->paginationUrls['next'])): ?><a href="<?php echo html_escape($this->paginationUrls['next']); ?>"><?php echo __('la próxima página'); ?> &#187;</a><?php else: ?><?php echo __('la próxima página'); ?> &#187;<?php endif; ?>
@@ -403,12 +407,11 @@ jQuery(document).ready(function() {
         </p>
 
         <!-- transcription -->
-         <div class="transcribe-column">
 	 <div id="scripto-transcription">
         <?php if ($this->doc->canEditTranscriptionPage()): ?>
             <div id="scripto-transcription-edit" style="display: none;">
             <?php if ($this->doc->isProtectedTranscriptionPage()): ?>
-                <div class="alert alert-error">
+                <div class="alert alert-/error">
                     <strong>This transcription is complete!</strong>
                 </div><!--alert alert-error-->
                 <div id="scripto-transcription-page-html">
@@ -418,6 +421,7 @@ jQuery(document).ready(function() {
                 <div class="alert alert-info">
                     <strong>Transcribe abajo.</strong>
                 </div><!--alert alert-info-->
+		<div><p>á Á é É í Í ó Ó ú Ú ñ Ñ ç Ç</div>
                 <div><?php echo $this->formTextarea('scripto-transcription-page-wikitext', $this->doc->getTranscriptionPageWikitext(), array('cols' => '76', 'rows' => '16')); ?></div>
                 <?php endif; ?>
                 <div>
@@ -430,7 +434,7 @@ jQuery(document).ready(function() {
         <?php endif; ?>
 
             <h2><?php echo __('Transcripción'); ?>
-            <?php if ($this->doc->canEditTranscriptionPage()): ?> [<a href="#" id="scripto-transcription-edit-show"><?php echo __('Editar'); ?></a>]<?php endif; ?>
+            <?php if ($this->doc->canEditTranscriptionPage()): ?> [<a href="#" id="scripto-transcription-edit-show"><?php echo __('editar'); ?></a>]<?php endif; ?>
             <?php if ($this->scripto->canProtect()): ?> [<a href="<?php echo html_escape($this->doc->getTranscriptionPageMediawikiUrl()); ?>"><?php echo __('wiki'); ?></a>]<?php endif; ?>
             [<a href="<?php echo html_escape(url(array('item-id' => $this->doc->getId(), 'file-id' => $this->doc->getPageId(), 'namespace-index' => 0), 'scripto_history')); ?>"><?php echo __('Historia'); ?></a>]</h2>
             <div>
@@ -441,6 +445,25 @@ jQuery(document).ready(function() {
             <div id="scripto-transcription-page-html"><?php echo $this->transcriptionPageHtml; ?></div>
         </div><!-- #scripto-transcription -->
 	</div> <!-- transcribe column -->
+	</div> <!--row-->
+	<div class="row">
+	<!-- this is maddy's attempt to create a quick tips. note: it is within .doc-column and uses jquery .hide and .show-->
+                <div id="transcription-tips col-md-4 col-sm-4 col-xs-4">
+                     <h2 style="padding-left:10px" ><u>Instrucciones para transcribir
+</u></h2>
+                    <ul style="margin-top:0">
+                    <li>Escriba las palabras como se leen en el PDF, aunque contienen errores ortográficos.</li>
+                    <li>Escribe el numero de la página si aparece</li>
+                    <li>Si no entiende una palabra, transcríbala entre paréntesis, con un signo de interrogación: (palabra?)</li>
+                    <li>Haga click en "guardar" frecuentemente</li>
+                    <li>Complete las abreviaturas en corchetes: "p[eso]s"</li>
+                            </ul>
+                     <h2 style="padding-left:10px" ><u>Recursos para la transcripción</u></h2>
+                    <ul style="margin-top:0">
+                    <li><a href="http://spanishpaleographytool.org/"target="_blank">Spanish Paleography Tool</a></li>
+                    <li><a href="http://www.iifilologicas.unam.mx/dicabenovo"target="_blank">Diccionario de Abreviaturas Novohispanas</a></li>
+                </div> 
+	</div>
 	</div>
 
         <!-- discussion -->
@@ -457,7 +480,7 @@ jQuery(document).ready(function() {
             <p><?php echo __('You don\'t have permission to discuss this page.'); ?></p>
             <?php endif; ?>
             <h2><?php echo __('Discusión para esta página'); ?>
-            <?php if ($this->doc->canEditTalkPage()): ?> [<a href="#" id="scripto-talk-edit-show"><?php echo __('editar'); ?></a>]<?php endif; ?>
+            <?php if ($this->doc->canEditTalkPage()): ?> [<a href="#" id="scripto-talk-edit-show"><?php echo __('Guardar'); ?></a>]<?php endif; ?>
             <?php if ($this->scripto->canProtect()): ?> [<a href="<?php echo html_escape($this->doc->getTalkPageMediawikiUrl()); ?>"><?php echo __('wiki'); ?></a>]<?php endif; ?>
             [<a href="<?php echo html_escape(url(array('item-id' => $this->doc->getId(), 'file-id' => $this->doc->getPageId(), 'namespace-index' => 1), 'scripto_history')); ?>"><?php echo __('historia'); ?></a>]</h2>
             <div>
